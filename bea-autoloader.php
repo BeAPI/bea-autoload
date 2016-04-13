@@ -1,5 +1,4 @@
 <?php
-
 /*
  Plugin Name: BEA Autoloader
  Version: 1.0.0
@@ -42,23 +41,20 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  *     /path/to/packages/foo-bar/
  *         src/
- *             Baz.php             # Foo\Bar\Baz
+ *             baz.php             # Foo\Bar\Baz
  *             Qux/
- *                 Quux.php        # Foo\Bar\Qux\Quux
+ *                 quux.php        # Foo\Bar\Qux\Quux
  *         tests/
- *             BazTest.php         # Foo\Bar\BazTest
+ *             baz-test.php         # Foo\Bar\Baz_test
  *             Qux/
- *                 QuuxTest.php    # Foo\Bar\Qux\QuuxTest
+ *                 quux-test.php    # Foo\Bar\Qux\Quux_test
  *
  * ... add the path to the class files for the \Foo\Bar\ namespace prefix
  * as follows:
  *
  *      <?php
  *      // instantiate the loader
- *      $loader = new \Example\Psr4AutoloaderClass;
- *
- *      // register the autoloader
- *      $loader->register();
+ *      $loader = \BEA\Autoloader::get_instance();
  *
  *      // register the base directories for the namespace prefix
  *      $loader->addNamespace('Foo\Bar', '/path/to/packages/foo-bar/src');
