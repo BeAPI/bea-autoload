@@ -1,6 +1,6 @@
 <?php
 /*
- Plugin Name: BEA Autoloader
+ Plugin Name: Autoloader
  Version: 1.0.0
  Plugin URI: http://www.beapi.fr
  Description: The autoloader class in order to load all plugins files
