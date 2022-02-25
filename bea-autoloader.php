@@ -101,7 +101,7 @@ class Autoloader {
 	/**
 	 * Constructor protected from the outside
 	 */
-	final private function __construct() {
+	private function __construct() {
 
 	}
 
@@ -110,7 +110,7 @@ class Autoloader {
 	 *
 	 * @return void
 	 */
-	final private function __clone() {
+	final public function __clone() {
 	}
 
 	/**
@@ -118,7 +118,7 @@ class Autoloader {
 	 *
 	 * @return void
 	 */
-	final private function __wakeup() {
+	final public function __wakeup() {
 	}
 
 	/**
