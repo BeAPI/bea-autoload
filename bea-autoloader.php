@@ -1,7 +1,7 @@
 <?php
 /*
  Plugin Name: Autoloader
- Version: 1.0.0
+ Version: 1.0.1
  Plugin URI: http://www.beapi.fr
  Description: The autoloader class in order to load all plugins files
  Author: BE API Technical team
