@@ -110,7 +110,7 @@ class Autoloader {
 	 *
 	 * @return void
 	 */
-	final public function __clone() {
+	private function __clone() {
 	}
 
 	/**
