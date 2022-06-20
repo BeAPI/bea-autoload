@@ -108,17 +108,19 @@ class Autoloader {
 	/**
 	 * prevent the instance from being cloned
 	 *
-	 * @return void
+	 * @throws Exception
 	 */
-	private function __clone() {
+	public function __clone() {
+		throw new \Exception( 'Cannot clone singleton' );
 	}
 
 	/**
 	 * prevent from being unserialized
 	 *
-	 * @return void
+	 * @throws Exception
 	 */
-	final public function __wakeup() {
+	public function __wakeup() {
+		throw new \Exception( 'Cannot serialize singleton' );
 	}
 
 	/**
