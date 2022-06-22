@@ -1,7 +1,7 @@
 <?php
 /*
  Plugin Name: Autoloader
- Version: 1.0.2
+ Version: 1.0.3
  Plugin URI: http://www.beapi.fr
  Description: The autoloader class in order to load all plugins files
  Author: BE API Technical team
@@ -110,7 +110,7 @@ class Autoloader {
 	 *
 	 * @throws Exception
 	 */
-	public function __clone() {
+	private function __clone() {
 		throw new \Exception( 'Cannot clone singleton' );
 	}
 
@@ -119,7 +119,7 @@ class Autoloader {
 	 *
 	 * @throws Exception
 	 */
-	public function __wakeup() {
+	final public function __wakeup() {
 		throw new \Exception( 'Cannot serialize singleton' );
 	}
 
