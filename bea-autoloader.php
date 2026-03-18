@@ -1,7 +1,7 @@
 <?php
 /*
  Plugin Name: Autoloader
- Version: 1.0.3
+ Version: 1.0.4
  Plugin URI: http://www.beapi.fr
  Description: The autoloader class in order to load all plugins files
  Author: BE API Technical team
@@ -91,7 +91,7 @@ class Autoloader {
 	 */
 	final public static function get_instance() {
 		if ( is_null( self::$instance ) ) {
-			self::$instance = new static;
+			self::$instance = new static();
 		}
 
 		return self::$instance;
@@ -119,7 +119,7 @@ class Autoloader {
 	 *
 	 * @throws Exception
 	 */
-	final public function __wakeup() {
+	public function __wakeup(): void {
 		throw new \Exception( 'Cannot serialize singleton' );
 	}
 
